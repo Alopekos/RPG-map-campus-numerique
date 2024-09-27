@@ -1,5 +1,9 @@
-<script setup></script>
+<script setup>
+import map from "./components/Map.vue";
+</script>
 
-<template></template>
+<template>
+  <router-view></router-view>
+</template>
 
 <style></style>
