@@ -5,8 +5,20 @@ export default {
   components: {
     showMap,
   },
+  data() {
+    return {
+      images: [
+        {
+          id: 1,
+          path: "/img/Full_map.png",
+        },
+      ],
+    };
+  },
 };
 </script>
 <template>
-  <showMap imgSrc="/img/Map3.png" />
+  <router-link class="container" to="/map/0">
+    <showMap :imgSrc="images[0].path" />
+  </router-link>
 </template>

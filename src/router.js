@@ -2,12 +2,12 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import App from "./App.vue";
 import map from "./components/Map.vue";
+import MapArea from "./components/MapArea.vue";
 
 export const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: "/", name: "App", App },
-    { path: "/map", name: "map", component: map },
-    { path: "/map/:current", component: map },
+    { path: "/", name: "map", component: map },
+    { path: "/map/:mapId", component: MapArea },
   ],
 });

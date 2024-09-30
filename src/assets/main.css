@@ -1,7 +1,6 @@
 @import "./base.css";
 
 #app {
-  margin: auto;
   padding: 2rem;
   font-weight: normal;
 }
@@ -16,4 +15,15 @@ a,
 
 body {
   display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 2svh 0;
+}
+
+h1 {
+  text-align: center;
 }

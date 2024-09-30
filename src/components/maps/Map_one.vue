@@ -8,13 +8,18 @@ export default {
   <img :src="imgSrc" alt="map" />
 </template>
 
-<style scoped>
+<style>
 .container {
   width: 100%;
+  height: 80svh;
   display: flex;
+  align-items: center;
 }
 img {
-  height: 60svh;
-  width: 400px;
+  margin: auto;
+  height: auto;
+  max-height: 80svh;
+  min-width: 80svh;
+  border-radius: 1svh;
 }
 </style>
