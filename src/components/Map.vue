@@ -18,7 +18,36 @@ export default {
 };
 </script>
 <template>
-  <router-link class="container" to="/map/0">
+  <div class="container">
     <showMap :imgSrc="images[0].path" />
-  </router-link>
+    <router-link to="/map/0"
+      ><button>Entrer dans le donjon</button>
+    </router-link>
+  </div>
 </template>
+
+<style scoped>
+img {
+  height: auto;
+  width: 50svh;
+  border-radius: 1svh;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  padding: 1rem;
+  background-color: bisque;
+  border-radius: 10px;
+  font-size: 2svh;
+  cursor: pointer;
+}
+</style>
