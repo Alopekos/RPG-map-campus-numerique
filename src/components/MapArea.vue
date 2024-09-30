@@ -14,9 +14,38 @@ export default {
     return {
       name: "map area",
       images: [
-        { id: 0, path: "/img/Map1.png" },
-        { id: 1, path: "/img/Map2.png" },
-        { id: 2, path: "/img/Map3.png" },
+        {
+          id: 0,
+          path: "/img/Map0.png",
+          up: false,
+          down: "/map/1",
+          left: false,
+          right: "/map/2",
+        },
+        {
+          id: 1,
+          path: "/img/Map1.png",
+          up: false,
+          down: false,
+          left: "/map/3",
+          right: false,
+        },
+        {
+          id: 2,
+          path: "/img/Map2.png",
+          up: "/",
+          down: false,
+          left: false,
+          right: false,
+        },
+        {
+          id: 3,
+          path: "/img/Map3.png",
+          up: "/",
+          down: false,
+          left: false,
+          right: false,
+        },
       ],
     };
   },
@@ -24,16 +53,28 @@ export default {
 </script>
 <template>
   <div class="container">
-    <router-link to="/">
+    <router-link
+      v-if="images[$route.params.mapId].up != false"
+      :to="images[$route.params.mapId].up"
+    >
       <div class="box box-up"><span class="arrow">🡩</span></div>
     </router-link>
-    <router-link to="/">
+    <router-link
+      v-if="images[$route.params.mapId].left != false"
+      :to="images[$route.params.mapId].left"
+    >
       <div class="box box-left"><span class="arrow">🡨</span></div>
     </router-link>
-    <router-link to="/">
+    <router-link
+      v-if="images[$route.params.mapId].right != false"
+      :to="images[$route.params.mapId].right"
+    >
       <div class="box box-right"><span class="arrow">🡪</span></div>
     </router-link>
-    <router-link to="/">
+    <router-link
+      v-if="images[$route.params.mapId].down != false"
+      :to="images[$route.params.mapId].down"
+    >
       <div class="box box-down"><span class="arrow">🡫</span></div>
     </router-link>
     <showMap :imgSrc="images[$route.params.mapId].path" />
