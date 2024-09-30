@@ -1,20 +1,12 @@
 <script>
-export default {};
+import showMap from "./maps/Map_one.vue";
+
+export default {
+  components: {
+    showMap,
+  },
+};
 </script>
-
 <template>
-  <div class="container">
-    <img src="../assets/Full_map.png" alt="map" />
-  </div>
+  <showMap imgSrc="/img/Map3.png" />
 </template>
-
-<style scoped>
-.container {
-  width: 100%;
-  display: flex;
-}
-img {
-  height: 60svh;
-  width: 400px;
-}
-</style>

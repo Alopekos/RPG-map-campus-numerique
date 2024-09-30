@@ -8,5 +8,6 @@ export const router = createRouter({
   routes: [
     { path: "/", name: "App", App },
     { path: "/map", name: "map", component: map },
+    { path: "/map/:current", component: map },
   ],
 });
