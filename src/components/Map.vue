@@ -9,8 +9,8 @@ export default {
     return {
       images: [
         {
-          id: 1,
-          path: "/img/Full_map.png",
+          id: 0,
+          path: "/img/Assets/Main.png",
         },
       ],
     };
@@ -19,8 +19,12 @@ export default {
 </script>
 <template>
   <div class="container">
-    <showMap :imgSrc="images[0].path" />
-    <router-link to="/map/0"
+    <div class="title">
+      <h1>Carte Jeu de Rôle - Campus Numérique</h1>
+    </div>
+    <span class="map">🗺️</span>
+
+    <router-link to="/dungeon"
       ><button>Entrer dans le donjon</button>
     </router-link>
   </div>
@@ -29,25 +33,13 @@ export default {
 <style scoped>
 img {
   height: auto;
-  width: 50svh;
+  width: 70svh;
   border-radius: 1svh;
-}
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  height: 100vh;
   margin: 0;
   padding: 0;
 }
 
-button {
-  border: none;
-  padding: 1rem;
-  background-color: bisque;
-  border-radius: 10px;
-  font-size: 2svh;
-  cursor: pointer;
+.map {
+  font-size: 15rem;
 }
 </style>

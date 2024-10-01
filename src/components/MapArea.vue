@@ -15,6 +15,10 @@ export default {
 </script>
 <template>
   <div class="container">
+    <router-link to="/dungeon" class="retour">
+      <button><strong>Retour</strong></button>
+    </router-link>
+
     <router-link
       v-if="images[$route.params.mapId].up != false"
       :to="images[$route.params.mapId].up"
@@ -44,12 +48,20 @@ export default {
       v-if="images[$route.params.mapId].shop == true"
       style="position: absolute; font-size: 10rem"
     >
-      You win !
+      <img class="merchant" src="/img/Assets/Merchant.png" />
+      <p class="merchant-text">Marchand</p>
     </h1>
   </div>
 </template>
 
 <style scoped>
+.retour {
+  position: fixed;
+  top: 77svh;
+  left: 47.75svw;
+  z-index: 10;
+}
+
 .container {
   width: 100%;
   height: 100svh;
@@ -60,6 +72,11 @@ export default {
   align-items: center;
 }
 
+.title {
+  position: absolute;
+  top: 9svh;
+}
+
 img {
   height: 70%;
   max-width: 70%;
@@ -68,6 +85,23 @@ img {
   border-radius: 1svh;
   margin: auto;
 }
+
+.merchant {
+  height: 20svh;
+  position: relative;
+  top: 20svh;
+}
+
+.merchant-text {
+  position: relative;
+  top: -70px;
+  color: #cbb77e;
+  font-size: 1.5rem;
+  background-color: rgba(200, 0, 0, 0.5);
+  border-radius: 10px;
+  border: 2px solid #cbb77e;
+}
+
 .box {
   position: fixed;
   transition: 0.3s;
