@@ -8,9 +8,13 @@
 body {
   display: flex;
   flex-direction: column;
-
+  background-color: #181818;
+  transition: 1s;
 }
 
+img{
+  transition: 1s;
+}
 
 button {
   border: none;

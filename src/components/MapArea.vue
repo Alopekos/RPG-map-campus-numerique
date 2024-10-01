@@ -20,32 +20,32 @@ export default {
     </router-link>
 
     <router-link
-      v-if="images[$route.params.mapId].up != false"
+      v-if="images[$route.params.mapId].up"
       :to="images[$route.params.mapId].up"
     >
       <div class="box box-up"><span class="arrow">🡩</span></div>
     </router-link>
     <router-link
-      v-if="images[$route.params.mapId].left != false"
+      v-if="images[$route.params.mapId].left"
       :to="images[$route.params.mapId].left"
     >
       <div class="box box-left"><span class="arrow">🡨</span></div>
     </router-link>
     <router-link
-      v-if="images[$route.params.mapId].right != false"
+      v-if="images[$route.params.mapId].right"
       :to="images[$route.params.mapId].right"
     >
       <div class="box box-right"><span class="arrow">🡪</span></div>
     </router-link>
     <router-link
-      v-if="images[$route.params.mapId].down != false"
+      v-if="images[$route.params.mapId].down"
       :to="images[$route.params.mapId].down"
     >
       <div class="box box-down"><span class="arrow">🡫</span></div>
     </router-link>
     <showMap :imgSrc="images[$route.params.mapId].path" />
     <h1
-      v-if="images[$route.params.mapId].shop == true"
+      v-if="images[$route.params.mapId].shop"
       style="position: absolute; font-size: 10rem"
     >
       <img class="merchant" src="/img/Assets/Merchant.png" />
@@ -57,8 +57,8 @@ export default {
 <style scoped>
 .retour {
   position: fixed;
-  top: 77svh;
-  left: 47.75svw;
+  top: 70svh;
+  left: auto;
   z-index: 10;
 }
 
