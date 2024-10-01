@@ -5,16 +5,6 @@ export default {
   components: {
     showMap,
   },
-  data() {
-    return {
-      images: [
-        {
-          id: 0,
-          path: "/img/Assets/Main.png",
-        },
-      ],
-    };
-  },
 };
 </script>
 <template>

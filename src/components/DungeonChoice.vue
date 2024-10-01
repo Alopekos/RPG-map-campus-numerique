@@ -3,7 +3,7 @@
     <router-link to="/map/1">
       <div class="container">
         <button><strong>1. Alduin's Keep</strong> 🐉</button>
-        <img src="/img/Assets/Main.png" alt="AlduinsMap" width="500px" />
+        <img src="/img/Assets/Main.png" alt="AlduinsMap" />
       </div>
     </router-link>
     <router-link to="/">
@@ -21,3 +21,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+img {
+  width: 50svh;
+}
+</style>
