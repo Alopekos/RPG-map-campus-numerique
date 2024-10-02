@@ -4,7 +4,6 @@
   height: 100svh;
 }
 
-
 body {
   display: flex;
   flex-direction: column;
@@ -12,7 +11,7 @@ body {
   transition: 1s;
 }
 
-img{
+img {
   transition: 1s;
 }
 
@@ -22,11 +21,12 @@ button {
   background-color: black;
   border: 3px solid white;
   color: white;
-font-family: 'Lexipa', sans-serif;
+  font-family: "Lexipa", sans-serif;
   border-radius: 2px;
   font-size: 2svh;
-  margin: 3svh 0;
+
   cursor: pointer;
+  margin: 0 2svh;
 }
 .container {
   display: flex;
@@ -43,7 +43,7 @@ h1 {
   text-align: center;
   margin: 3svh 0;
   font-size: 2rem;
-  font-family:  'Lexipa', sans-serif;
+  font-family: "Lexipa", sans-serif;
 }
 
 h2 {

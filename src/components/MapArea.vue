@@ -9,16 +9,13 @@ export default {
     return {
       name: "map area",
       images: data,
+      currRoom: "/map/" + (data.length - 1),
     };
   },
 };
 </script>
 <template>
   <div class="container">
-    <router-link to="/dungeon" class="retour">
-      <button><strong>Retour</strong></button>
-    </router-link>
-
     <router-link
       v-if="images[$route.params.mapId].up"
       :to="images[$route.params.mapId].up"
@@ -51,15 +48,32 @@ export default {
       <img class="merchant" src="/img/Assets/Merchant.png" />
       <p class="merchant-text">Marchand</p>
     </h1>
+    <div class="buttons-container">
+      <router-link to="/dungeon">
+        <button class="button-contained"><strong>Retour</strong></button>
+      </router-link>
+      <router-link :to="currRoom">
+        <button class="button-contained">
+          <strong>Carte actuelle</strong>
+        </button>
+      </router-link>
+    </div>
   </div>
 </template>
 
 <style scoped>
-.retour {
-  position: fixed;
-  top: 70svh;
+.buttons-container {
+  top: 75svh;
   left: auto;
   z-index: 10;
+  padding: 0 4svh;
+  background-color: black;
+  border-radius: 10px;
+  border: 3px solid white;
+}
+
+.button-contained {
+  border: none;
 }
 
 .container {
@@ -68,7 +82,7 @@ export default {
   display: flex;
   margin: 0;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
@@ -78,23 +92,23 @@ export default {
 }
 
 img {
-  height: 70%;
-  max-width: 70%;
+  height: 60%;
+  max-width: 60%;
   width: auto;
   object-fit: contain;
   border-radius: 1svh;
-  margin: auto;
+  margin: 1.5svh auto;
 }
 
 .merchant {
   height: 20svh;
   position: relative;
-  top: 20svh;
+  top: 15svh;
 }
 
 .merchant-text {
   position: relative;
-  top: -70px;
+  top: -110px;
   color: #cbb77e;
   font-size: 1.5rem;
   background-color: rgba(200, 0, 0, 0.5);
