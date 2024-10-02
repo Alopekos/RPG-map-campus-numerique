@@ -3,6 +3,33 @@
 #app {
   height: 100svh;
 }
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+nav > a {
+  padding: 1svh 2svh;
+  margin: 1svh 2svh;
+  background-color: rgb(88, 35, 88);
+  border-radius: 3px;
+  text-decoration: none;
+  color: white;
+  z-index: 10;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav > a:hover {
+  transition: 0.7s;
+  background-color: rgb(24, 9, 24);
+}
+
+.parenthesis {
+  font-size: 0.7rem;
+  color: rgb(192, 190, 190);
+}
 
 body {
   display: flex;
