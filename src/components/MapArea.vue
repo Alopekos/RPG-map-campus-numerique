@@ -52,6 +52,11 @@ export default {
       <router-link to="/dungeon">
         <button class="button-contained"><strong>Retour</strong></button>
       </router-link>
+      <router-link to="/map/1">
+        <button class="button-contained">
+          <strong>Salle-1</strong>
+        </button>
+      </router-link>
       <router-link :to="currRoom">
         <button class="button-contained">
           <strong>Carte actuelle</strong>
