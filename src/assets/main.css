@@ -7,6 +7,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: start;
+  position: fixed;
 }
 
 nav > a {
@@ -49,7 +50,6 @@ a {
 
 p {
   margin: 2svh 0;
-  width: 30%;
 }
 
 button {

@@ -16,31 +16,34 @@ export default {
 </script>
 <template>
   <div class="container">
-    <router-link
-      v-if="images[$route.params.mapId].up"
-      :to="images[$route.params.mapId].up"
-    >
-      <div class="box box-up"><span class="arrow">🡩</span></div>
-    </router-link>
-    <router-link
-      v-if="images[$route.params.mapId].left"
-      :to="images[$route.params.mapId].left"
-    >
-      <div class="box box-left"><span class="arrow">🡨</span></div>
-    </router-link>
-    <router-link
-      v-if="images[$route.params.mapId].right"
-      :to="images[$route.params.mapId].right"
-    >
-      <div class="box box-right"><span class="arrow">🡪</span></div>
-    </router-link>
-    <router-link
-      v-if="images[$route.params.mapId].down"
-      :to="images[$route.params.mapId].down"
-    >
-      <div class="box box-down"><span class="arrow">🡫</span></div>
-    </router-link>
-    <showMap :imgSrc="images[$route.params.mapId].path" />
+    <div class="map-details">
+      <div class="map">Voici Un morceau du site</div>
+      <router-link
+        v-if="images[$route.params.mapId].up"
+        :to="images[$route.params.mapId].up"
+      >
+        <div class="box box-up"><span class="arrow">🡩</span></div>
+      </router-link>
+      <router-link
+        v-if="images[$route.params.mapId].left"
+        :to="images[$route.params.mapId].left"
+      >
+        <div class="box box-left"><span class="arrow">🡨</span></div>
+      </router-link>
+      <router-link
+        v-if="images[$route.params.mapId].right"
+        :to="images[$route.params.mapId].right"
+      >
+        <div class="box box-right"><span class="arrow">🡪</span></div>
+      </router-link>
+      <router-link
+        v-if="images[$route.params.mapId].down"
+        :to="images[$route.params.mapId].down"
+      >
+        <div class="box box-down"><span class="arrow">🡫</span></div>
+      </router-link>
+      <showMap :imgSrc="images[$route.params.mapId].path" />
+    </div>
     <h1
       v-if="images[$route.params.mapId].shop"
       style="position: absolute; font-size: 10rem"
@@ -68,8 +71,9 @@ export default {
 
 <style scoped>
 .buttons-container {
+  position: fixed;
   top: 75svh;
-  left: auto;
+  left: 41%;
   z-index: 10;
   padding: 0 4svh;
   background-color: black;
@@ -79,6 +83,20 @@ export default {
 
 .button-contained {
   border: none;
+}
+
+.map-details {
+  height: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.map {
+  border: white 4px solid;
+  border-radius: 10px;
+  padding: 2svh;
+  max-width: 20svw;
+  height: 50%;
 }
 
 .container {
@@ -97,8 +115,7 @@ export default {
 }
 
 img {
-  height: 60%;
-  max-width: 60%;
+  height: 100%;
   width: auto;
   object-fit: contain;
   border-radius: 1svh;
@@ -107,13 +124,14 @@ img {
 
 .merchant {
   height: 20svh;
-  position: relative;
-  top: 15svh;
+  position: absolute;
+  top: 0;
 }
 
 .merchant-text {
-  position: relative;
-  top: -110px;
+  position: absolute;
+  top: -30px;
+  left: 30px;
   color: #cbb77e;
   font-size: 1.5rem;
   background-color: rgba(200, 0, 0, 0.5);
