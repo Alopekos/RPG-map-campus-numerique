@@ -42,6 +42,16 @@ img {
   transition: 1s;
 }
 
+a {
+  color: white;
+  text-decoration: none !important;
+}
+
+p {
+  margin: 2svh 0;
+  width: 30%;
+}
+
 button {
   border: none;
   padding: 1rem;
@@ -51,7 +61,7 @@ button {
   font-family: "Lexipa", sans-serif;
   border-radius: 2px;
   font-size: 2svh;
-
+  text-decoration: none;
   cursor: pointer;
   margin: 0 2svh;
 }
