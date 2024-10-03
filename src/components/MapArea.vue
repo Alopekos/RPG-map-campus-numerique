@@ -15,42 +15,36 @@ export default {
 };
 </script>
 <template>
+  <div class="map-details">
+    <div class="map">Rendre dynamique en fonction des salles</div>
+  </div>
   <div class="container">
-    <div class="map-details">
-      <div class="map">Voici Un morceau du site</div>
-      <router-link
-        v-if="images[$route.params.mapId].up"
-        :to="images[$route.params.mapId].up"
-      >
-        <div class="box box-up"><span class="arrow">🡩</span></div>
-      </router-link>
-      <router-link
-        v-if="images[$route.params.mapId].left"
-        :to="images[$route.params.mapId].left"
-      >
-        <div class="box box-left"><span class="arrow">🡨</span></div>
-      </router-link>
-      <router-link
-        v-if="images[$route.params.mapId].right"
-        :to="images[$route.params.mapId].right"
-      >
-        <div class="box box-right"><span class="arrow">🡪</span></div>
-      </router-link>
-      <router-link
-        v-if="images[$route.params.mapId].down"
-        :to="images[$route.params.mapId].down"
-      >
-        <div class="box box-down"><span class="arrow">🡫</span></div>
-      </router-link>
-      <showMap :imgSrc="images[$route.params.mapId].path" />
-    </div>
-    <h1
-      v-if="images[$route.params.mapId].shop"
-      style="position: absolute; font-size: 10rem"
+    <router-link
+      v-if="images[$route.params.mapId].up"
+      :to="images[$route.params.mapId].up"
     >
-      <img class="merchant" src="/img/Assets/Merchant.png" />
-      <p class="merchant-text">Marchand</p>
-    </h1>
+      <div class="box box-up"><span class="arrow">🡩</span></div>
+    </router-link>
+    <router-link
+      v-if="images[$route.params.mapId].left"
+      :to="images[$route.params.mapId].left"
+    >
+      <div class="box box-left"><span class="arrow">🡨</span></div>
+    </router-link>
+    <router-link
+      v-if="images[$route.params.mapId].right"
+      :to="images[$route.params.mapId].right"
+    >
+      <div class="box box-right"><span class="arrow">🡪</span></div>
+    </router-link>
+    <router-link
+      v-if="images[$route.params.mapId].down"
+      :to="images[$route.params.mapId].down"
+    >
+      <div class="box box-down"><span class="arrow">🡫</span></div>
+    </router-link>
+    <showMap :imgSrc="images[$route.params.mapId].path" />
+
     <div class="buttons-container">
       <router-link to="/dungeon">
         <button class="button-contained"><strong>Retour</strong></button>
@@ -67,36 +61,50 @@ export default {
       </router-link>
     </div>
   </div>
+  <h1 v-if="images[$route.params.mapId].shop" class="merchant-container">
+    <div class="wrap">
+      <img class="merchant" src="/img/Assets/Merchant.png" />
+      <p class="merchant-text">Marchand</p>
+    </div>
+  </h1>
 </template>
 
 <style scoped>
 .buttons-container {
   position: fixed;
-  top: 75svh;
-  left: 41%;
+  top: 80svh;
   z-index: 10;
   padding: 0 4svh;
   background-color: black;
   border-radius: 10px;
   border: 3px solid white;
+  display: flex;
+  flex-wrap: wrap;
 }
-
+ 
 .button-contained {
   border: none;
+  font-size: 1rem;
 }
 
 .map-details {
-  height: 70%;
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
+  position: absolute;
 }
 
 .map {
   border: white 4px solid;
   border-radius: 10px;
+  background-color: black;
   padding: 2svh;
-  max-width: 20svw;
-  height: 50%;
+  max-width: 30svh;
+  max-height: auto;
+  text-align: center;
+  position: relative;
+  left: 15svw;
 }
 
 .container {
@@ -118,25 +126,43 @@ img {
   height: 100%;
   width: auto;
   object-fit: contain;
+  max-height: 80svh;
   border-radius: 1svh;
   margin: 1.5svh auto;
 }
 
-.merchant {
-  height: 20svh;
+.merchant-container {
+  display: flex;
   position: absolute;
-  top: 0;
+  top: 50svh;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrap {
+  width: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.merchant {
+  width: 100%;
+  margin: 0;
 }
 
 .merchant-text {
-  position: absolute;
-  top: -30px;
-  left: 30px;
+  width: 100%;
+  text-align: center;
   color: #cbb77e;
   font-size: 1.5rem;
   background-color: rgba(200, 0, 0, 0.5);
   border-radius: 10px;
   border: 2px solid #cbb77e;
+  margin: 0;
 }
 
 .box {
@@ -200,6 +226,10 @@ img {
   img {
     max-width: 70%;
     object-fit: cover;
+    transition: 1s;
+  }
+  .map {
+    display: none;
     transition: 1s;
   }
 }

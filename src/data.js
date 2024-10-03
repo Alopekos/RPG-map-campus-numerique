@@ -1,4 +1,5 @@
 const data = [
+  //Rajouter clef: description 
   {
     id: 0,
     path: "/img/Assets/ShopRoom.png",
@@ -7,6 +8,7 @@ const data = [
     left: false,
     right: false,
     shop: true,
+    //description: "text"
   },
   {
     id: 1,
