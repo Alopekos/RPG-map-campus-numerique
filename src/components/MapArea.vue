@@ -16,7 +16,7 @@ export default {
 </script>
 <template>
   <div class="map-details">
-    <div class="map">Rendre dynamique en fonction des salles</div>
+    <div class="map">{{ images[$route.params.mapId].description }}</div>
   </div>
   <div class="container">
     <router-link
@@ -81,7 +81,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
 }
- 
+
 .button-contained {
   border: none;
   font-size: 1rem;

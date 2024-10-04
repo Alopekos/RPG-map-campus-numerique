@@ -1,5 +1,4 @@
 const data = [
-  //Rajouter clef: description 
   {
     id: 0,
     path: "/img/Assets/ShopRoom.png",
@@ -8,7 +7,7 @@ const data = [
     left: false,
     right: false,
     shop: true,
-    //description: "text"
+    description: "unavailable if everything goes right",
   },
   {
     id: 1,
@@ -18,6 +17,8 @@ const data = [
     left: false,
     right: "/map/2",
     shop: false,
+    description:
+      "Nos aventuriers se retrouvent dans une salle contenant moult objets. De ce fait, ils fouillèrent l'endroit, cette fouille leur octroya de multiples objets tels que des épées🗡️, des arcs🏹, un bâton🏒, une paire de gants de boxe🥊 et autres. Armées pour affronter le donjon, ils avancèrent dans la deuxième salle.",
   },
   {
     id: 2,
@@ -27,6 +28,8 @@ const data = [
     left: "/map/1",
     right: false,
     shop: false,
+    description:
+      "À peine arrivés, une salle emplie de moisissures, une odeur putride arriva aux naseaux de nos aventuriers. Puis, comme s'ils arrivèrent de nulle part, trois squelettes💀 se jetèrent sur l'équipe des quatorze braves. Mais loin d'être submergés, nos aventuriers battèrent les ignobles et continuèrent leur chemin.",
   },
   {
     id: 3,
@@ -36,6 +39,8 @@ const data = [
     left: false,
     right: "/map/4",
     shop: false,
+    description:
+      "Dans cette salle étriquée et poussièreuse, de terrifiants bruits se font entendre au loin. Vous pourriez apercevoir au mur une énigme㊙️. Nos aventuriers, malgré leurs airs décrépits, résolurent l'énigme et la porte en chêne massif s'ouvrit d'un bruit sourd.",
   },
   {
     id: 4,
@@ -45,6 +50,8 @@ const data = [
     left: "/map/3",
     right: false,
     shop: false,
+    description:
+      "Se hâtant vers la troisième salle, il ne fallut que peu de temps au serpent 'Boss Snake'🐍, protecteur de ce lieu, pour s'attaquer aux aventuriers. Se laissant surprendre, l'un d'eux se fit avaler. Mais, le reste de la troupe, après une bataille légendaire, pourfenda la bête et libéra l'aventurier avâlé.",
   },
   {
     id: 5,
@@ -54,6 +61,8 @@ const data = [
     left: false,
     right: false,
     shop: false,
+    description:
+      "Nos aventuriers arrivèrent dans une salle remplie de pièges🪤 qu'ils durent éviter afin de progresser.",
   },
   {
     id: 6,
@@ -63,6 +72,8 @@ const data = [
     left: false,
     right: false,
     shop: true,
+    description:
+      "Au centre de cette salle, un homme était assis, en tailleur. Des marchandises💰 surgissaient de ses côtés et assaillaient de leur brillance les yeux de la troupe. Ils décidèrent de marchander avec lui...",
   },
   {
     id: 7,
@@ -72,6 +83,8 @@ const data = [
     left: false,
     right: false,
     shop: false,
+    description:
+      "Ambuscade !! Nos héros sont assaillis par des goblins👺. Ces petites créatures vicieuses tentent de profiter de l'effet de surprise, malheureusement pour eux, nos héros ne sont pas dupes et la bataille tourna à leur avantage. Victorieux, ils fouillèrent le corps de leur victime pour y trouver des objets et de l'or. Dans leurs effets personnels, un vieux parchemin se différencia du reste, mais dès son utilisation, un des aventuriers se vit maudit et transformé en chèvre🐐 !",
   },
   {
     id: 8,
@@ -81,6 +94,8 @@ const data = [
     left: "/map/13",
     right: false,
     shop: false,
+    description:
+      "Un long couloir devenant de plus en plus étroit et de plus en plus sombre s'étend devant nos aventuriers, au fond de la salle se trouve trois rochers, sur l'un est écrit 'Aqua🌊' sur un autre est inscrit 'Ignis🔥' et enfin, sur le dernier, 'Ventus💨'.",
   },
   {
     id: 9,
@@ -90,6 +105,8 @@ const data = [
     left: "/map/10",
     right: "/map/11",
     shop: false,
+    description:
+      "Lorsqu'un héros s'approche d'un rocher, il peut remarquer que le sol devient incandescent sous ses pieds. De ce fait, le groupe décida de se séparer en trois et chaque escouade disparut d'un seul coup à la suite d'un bruit sourd et mystique...",
   },
   {
     id: 10,
@@ -99,6 +116,8 @@ const data = [
     left: false,
     right: "/map/9",
     shop: false,
+    description:
+      "Salle de Golemus Ignis, le golem de feu🔥. Un tiers des aventuriers eut un combat légendaire contre la bête.",
   },
   {
     id: 11,
@@ -108,6 +127,8 @@ const data = [
     left: "/map/9",
     right: false,
     shop: false,
+    description:
+      "Salle de Golemino Aqua, le golem d'eau🌊. Un tiers des aventuriers eut un combat légendaire contre la bête.",
   },
   {
     id: 12,
@@ -117,6 +138,8 @@ const data = [
     left: false,
     right: false,
     shop: false,
+    description:
+      "Salle de Golemitte Ventus, le golem d'air💨. Un tiers des aventuriers eut un combat légendaire contre la bête.",
   },
   {
     id: 13,
@@ -126,6 +149,7 @@ const data = [
     left: false,
     right: "/map/8",
     shop: false,
+    description: "En cours...",
   },
 ];
 
