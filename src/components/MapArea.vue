@@ -93,6 +93,7 @@ export default {
   display: flex;
   align-items: center;
   position: absolute;
+  z-index: 2;
 }
 
 .map {
@@ -188,6 +189,7 @@ img {
   left: 0;
   width: 100%;
   height: 15%;
+  z-index: 0;
 }
 
 .box-left {
