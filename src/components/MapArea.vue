@@ -93,7 +93,7 @@ export default {
   display: flex;
   align-items: center;
   position: absolute;
-  z-index: 2;
+  z-index: -2;
 }
 
 .map {
