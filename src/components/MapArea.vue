@@ -97,9 +97,11 @@ export default {
 }
 
 .map {
+  opacity: 0.7;
+  color: #fff;
   border: white 4px solid;
   border-radius: 10px;
-  background-color: black;
+  background-color: #582358;
   padding: 2svh;
   max-width: 30svh;
   max-height: auto;
