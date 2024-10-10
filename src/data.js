@@ -146,11 +146,55 @@ const data = [
     path: "/img/maps/map_0/Map13.png",
     up: false,
     down: false,
-    left: false,
+    left: "/map/14",
     right: "/map/8",
     shop: false,
     description:
       "Une porte dérobé s'ouvre vers un endroit très lumineux.. Vous vous y approchez, et après une bouché d'air frais vous arrivez donc dans un champ à l'air libre, (le donjon est vraiment énorme ?!) le vent vous fait un bien fou ! Une fée 🧚 apparaît devant les aventuriers ous le savez, les fées sont des créatures légendaires ! Certaines légendes racontent même qu'elles auraient façonné le monde 🌍. Apprendre qu'une fée a été faite prisonnière vous noue l'estomac, car cela signifie qu'Alduin est incroyablement puissant !",
+  },
+  {
+    id: 14,
+    path: "/img/maps/map_0/Map14.png",
+    up: "/map/15",
+    down: false,
+    left: false,
+    right: "/map/13",
+    shop: false,
+    description:
+      "Les aventuriers ouvrent ensuite la porte de la cour qui mène au donjon 🏰. Un petit couloir les conduit dans une pièce assez spacieuse, où il y a suffisamment de place pour ne pas gêner les uns les autres. Ils y aperçoivent quelques meubles et une sorte de fenêtre de toit qui laisse entrer la lumière, rendant l'endroit plutôt agréable, bien que la pièce semble tout de même assez vide. Deux portes se trouvent de l'autre côté de la pièce. L'une des deux 🚪, encrypté d'une éngime, ne manque pas d'attirer la curiosité du groupe.",
+  },
+  {
+    id: 15,
+    path: "/img/maps/map_0/Map15.png",
+    up: "/map/16",
+    down: "/map/14",
+    left: false,
+    right: false,
+    shop: false,
+    description:
+      "À la réponse de l'énigme, la compagnie voit la porte de droite s'ouvrir. Ils s'enfoncent donc dans un couloir 🚶‍♂️, bien éclairé tout de même, mais aucune âme qui vive ou de trace sur le sol. Alors que la clique ne cesse d'avancer, le couloir arrive à sa fin, un mur ? Pas de suite ? Vous n'avez pas trop le temps de réfléchir que le pire arrive: le sol s'ouvre sous vos pieds 🕳️.",
+  },
+  {
+    id: 16,
+    path: "/img/maps/map_0/Map16.png",
+    up: "/map/17",
+    down: "/map/15",
+    left: false,
+    right: false,
+    shop: false,
+    description:
+      "Les aventuriers chutent tous dans un énorme toboggan 🛝! Et à la suite d'un court moment de gaieté et de jubilation, leur visage changea d'expression à la vue de leur destination.. Une salle remplie de piques 🌵?! Heureusement, grâce à la prouesse de certains, cette salle ne fit pas de morts mais certains tombèrent malades 🤢 en fouillant les cadavres déjà présents dans la salle. Ensuite, l'équipe continua de s'aventurer plus profondément dans le donjon.",
+  },
+  {
+    id: 17,
+    path: "/img/maps/map_0/Map17.png",
+    up: false,
+    down: "/map/16",
+    left: false,
+    right: false,
+    shop: false,
+    description:
+      "Dans cette salle, il y a une petite cheminée 🔥, une graaande table 🪑, une cuisine, c'est un T2 quoi, avec deux portes dont une porte magique... Au fond de la salle, sur un lit de paille 🛏️, un Gobelours 🧸 fait la sieste. Le combat n'a pas le temps de se finir constre celui-ci qu'après une petite minute... Une porte s'ouvre, et 6 gobelours en sortent ! Le groupe regrette instantanément ses actions.. Des bruits retentissent : Capitaine de garde noooooon ??!!! Les aventuriers les ont réveillés de leur dortoir, et ils sont sacrément énervés. ",
   },
 ];
 
