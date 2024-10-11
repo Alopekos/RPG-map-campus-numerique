@@ -1,11 +1,13 @@
 <script>
-import Map from "./maps/Map_one.vue";
+import Map from "./maps/MapImg.vue";
 import Info from "./map-info/Info.vue";
+import NavBtn from "./buttons/MainSiteButton.vue";
 import data from "../data.js";
 export default {
   components: {
     Map,
     Info,
+    NavBtn,
   },
   data() {
     return {
@@ -51,6 +53,7 @@ export default {
       <p class="merchant-text">Marchand</p>
     </div>
   </h1>
+  <NavBtn />
 </template>
 
 <style scoped>
@@ -73,9 +76,11 @@ img {
   height: 100%;
   width: auto;
   object-fit: contain;
-  max-height: 80svh;
+  max-height: 75svh;
   border-radius: 1svh;
   margin: 1.5svh auto;
+  position: relative;
+  left: 15svh;
 }
 
 .merchant-container {

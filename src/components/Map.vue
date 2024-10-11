@@ -1,14 +1,16 @@
 <script>
-import Map from "./maps/Map_one.vue";
-
+import Map from "./maps/MapImg.vue";
+import NavBtn from "./buttons/MainSiteButton.vue";
 export default {
   components: {
     Map,
+    NavBtn,
   },
 };
 </script>
 <template>
   <div class="container">
+    <NavBtn />
     <div class="title">
       <h1>Carte Jeu de Rôle - Campus Numérique</h1>
     </div>

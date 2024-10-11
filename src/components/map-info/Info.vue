@@ -1,5 +1,4 @@
 <script>
-
 export default {
   props: ["description"],
   data() {
@@ -23,7 +22,7 @@ export default {
   </div>
 </template>
 
-<style>
+<style scoped>
 .map-nav-container {
   display: flex;
   flex-direction: column;
@@ -53,7 +52,8 @@ export default {
   border-radius: 10px;
   background-color: #582358;
   padding: 2svh;
-  max-width: 30svh;
+  width: 20svw;
+  min-width: 200px;
   max-height: auto;
   text-align: center;
 }
@@ -64,5 +64,20 @@ export default {
   display: flex;
   align-items: center;
   position: absolute;
+}
+@media (max-width: 1250px) {
+  .map {
+    display: none;
+  }
+
+  .map-nav-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .buttons-container {
+    position: relative;
+    top: 30svh;
+  }
 }
 </style>
