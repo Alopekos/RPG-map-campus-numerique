@@ -35,7 +35,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 3svw 0 15svw;
+  margin: 0 7.6svw 0 15svw;
 }
 
 .buttons-container {
@@ -65,7 +65,6 @@ export default {
   text-align: center;
 }
 
-
 .map-details {
   height: 100%;
   width: 100%;
@@ -78,14 +77,14 @@ export default {
     display: none;
   }
 
+  .map-details {
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .map-nav-container {
     width: 100%;
     margin: 0;
-  }
-
-  .buttons-container {
-    position: relative;
-    top: 30svh;
   }
 }
 </style>

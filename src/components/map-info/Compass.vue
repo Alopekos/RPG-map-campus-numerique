@@ -26,6 +26,16 @@ export default {
 
 <template>
   <div v-show="defaultChecked" class="compass-container">
+    <div class="tile-row first-row">
+      <p>Minimap</p>
+      <button
+        @click="defaultChecked = false"
+        v-show="defaultChecked"
+        class="close"
+      >
+        <span>❌</span>
+      </button>
+    </div>
     <div v-for="value in tiles" class="tile-row">
       <div v-for="tile in value" class="tile">
         <CompassMapImg
@@ -33,7 +43,7 @@ export default {
           imgSrc="/img/maps/map_compass/Map_unknown.png"
         />
         <div v-else-if="tile != 0" class="map-container">
-          <router-link :to="'/map/' + tile">
+          <router-link @click="defaultChecked = false" :to="'/map/' + tile">
             <div class="tile-number">{{ images[tile].number }}</div>
             <CompassMapImg :imgSrc="images[tile].path" class="single-image" />
           </router-link>
@@ -42,9 +52,7 @@ export default {
       <br />
     </div>
   </div>
-  <button @click="defaultChecked = false" v-show="defaultChecked" class="close">
-    <span>❌</span>
-  </button>
+
   <div @click="defaultChecked = true" v-show="!defaultChecked" class="compass">
     <img src="/img/Assets/compass.png" alt="compass" />
   </div>
@@ -67,12 +75,34 @@ export default {
 .tile-row {
   display: flex;
   flex-direction: row;
+
+  align-items: center;
+}
+
+p {
+  margin: 0;
+  padding-left: 2svh;
+}
+
+span {
+  font-size: 1.3rem;
+}
+
+.first-row {
+  justify-content: space-between;
+  width: 100%;
+}
+
+button{
+  border: none;
+  background-color: rgb(34, 34, 34) !important;
+  margin: .5svh 1svh 0 0;
 }
 
 .compass {
   position: fixed;
   top: 75svh;
-  left: 22.5svw;
+  left: 23svw;
 }
 
 .compass > img {
@@ -123,15 +153,12 @@ img {
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 660px;
+  width: 670px;
   position: relative;
   background-color: rgb(48, 47, 47);
   border-radius: 10px;
   transition: 1s;
-  opacity: 0.8;
-}
-CompassMapImg {
-  position: absolute;
+  opacity: 0.95;
 }
 
 .menu-map {
@@ -141,6 +168,8 @@ CompassMapImg {
   align-items: center;
   justify-content: center;
 }
+
+
 .close {
   background-color: black;
   border-radius: 10px;
@@ -148,5 +177,12 @@ CompassMapImg {
   font-size: 1.5rem;
   transition: 1s;
   display: flex;
+}
+
+@media (max-width: 1250px) {
+  .compass {
+    top: 54svh;
+    left: auto;
+  }
 }
 </style>

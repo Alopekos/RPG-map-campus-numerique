@@ -25,9 +25,14 @@ export default {
 <template>
   <div class="container">
     <Map :imgSrc="images[$route.params.mapId].path" />
+    <h1 v-if="images[$route.params.mapId].shop" class="merchant-container">
+      <div class="wrap">
+        <img class="merchant" src="/img/Assets/Merchant.png" />
+        <h1 class="merchant-text">Marchand</h1>
+      </div>
+    </h1>
 
     <Info :description="images[$route.params.mapId].description" />
-
     <router-link
       v-if="images[$route.params.mapId].up"
       :to="images[$route.params.mapId].up"
@@ -55,13 +60,6 @@ export default {
     >
       <div class="box box-down"><span class="arrow">🡫</span></div>
     </router-link>
-
-    <h1 v-if="images[$route.params.mapId].shop" class="merchant-container">
-      <div class="wrap">
-        <img class="merchant" src="/img/Assets/Merchant.png" />
-        <h1 class="merchant-text">Marchand</h1>
-      </div>
-    </h1>
   </div>
 
   <NavBtn />
@@ -198,6 +196,7 @@ img {
   img {
     max-width: 70%;
     object-fit: cover;
+    left: 0;
     transition: 1s;
   }
   .map {
