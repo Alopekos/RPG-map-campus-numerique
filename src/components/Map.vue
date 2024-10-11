@@ -1,9 +1,9 @@
 <script>
-import showMap from "./maps/Map_one.vue";
+import Map from "./maps/Map_one.vue";
 
 export default {
   components: {
-    showMap,
+    Map,
   },
 };
 </script>

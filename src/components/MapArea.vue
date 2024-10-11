@@ -1,9 +1,11 @@
 <script>
-import showMap from "./maps/Map_one.vue";
+import Map from "./maps/Map_one.vue";
+import Info from "./map-info/Info.vue";
 import data from "../data.js";
 export default {
   components: {
-    showMap,
+    Map,
+    Info,
   },
   data() {
     return {
@@ -15,9 +17,7 @@ export default {
 };
 </script>
 <template>
-  <div class="map-details">
-    <div class="map">{{ images[$route.params.mapId].description }}</div>
-  </div>
+  <Info :description="images[$route.params.mapId].description" />
   <div class="container">
     <router-link
       v-if="images[$route.params.mapId].up"
@@ -43,23 +43,7 @@ export default {
     >
       <div class="box box-down"><span class="arrow">🡫</span></div>
     </router-link>
-    <showMap :imgSrc="images[$route.params.mapId].path" />
-
-    <div class="buttons-container">
-      <router-link to="/dungeon">
-        <button class="button-contained"><strong>Retour</strong></button>
-      </router-link>
-      <router-link to="/map/1">
-        <button class="button-contained">
-          <strong>Salle-1</strong>
-        </button>
-      </router-link>
-      <router-link :to="currRoom">
-        <button class="button-contained">
-          <strong>Carte actuelle</strong>
-        </button>
-      </router-link>
-    </div>
+    <Map :imgSrc="images[$route.params.mapId].path" />
   </div>
   <h1 v-if="images[$route.params.mapId].shop" class="merchant-container">
     <div class="wrap">
@@ -70,46 +54,6 @@ export default {
 </template>
 
 <style scoped>
-.buttons-container {
-  position: fixed;
-  top: 80svh;
-  z-index: 10;
-  padding: 0 4svh;
-  background-color: black;
-  border-radius: 10px;
-  border: 3px solid white;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.button-contained {
-  border: none;
-  font-size: 1rem;
-}
-
-.map-details {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  z-index: -2;
-}
-
-.map {
-  opacity: 0.7;
-  color: #fff;
-  border: white 4px solid;
-  border-radius: 10px;
-  background-color: #582358;
-  padding: 2svh;
-  max-width: 30svh;
-  max-height: auto;
-  text-align: center;
-  position: relative;
-  left: 15svw;
-}
-
 .container {
   width: 100%;
   height: 100svh;
