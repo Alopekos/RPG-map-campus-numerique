@@ -1,15 +1,16 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import App from "./App.vue";
-import map from "./components/Map.vue";
+import Compass from "./components/MiniMapChoice.vue";
+import Home from "./components/Map.vue";
 import MapArea from "./components/MapArea.vue";
 import DungeonChoice from "./components/DungeonChoice.vue";
 
 export const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: "/", name: "map", component: map },
+    { path: "/", name: "home", component: Home },
     { path: "/map/:mapId", component: MapArea },
-    {path: "/dungeon", name: "dungeon",component: DungeonChoice}
+    { path: "/dungeon", name: "dungeon", component: DungeonChoice },
+    { path: "/mini-map", name: "compass", component: Compass },
   ],
 });

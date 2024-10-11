@@ -4,6 +4,7 @@ export default {
   data() {
     return {
       name: "Info",
+      minimapClick: false,
     };
   },
 };

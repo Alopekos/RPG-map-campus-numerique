@@ -3,23 +3,30 @@ import Map from "./maps/MapImg.vue";
 import Info from "./map-info/Info.vue";
 import NavBtn from "./buttons/MainSiteButton.vue";
 import data from "../data.js";
+
+import Minimap from "./map-info/Compass.vue";
 export default {
   components: {
     Map,
     Info,
     NavBtn,
+    Minimap,
   },
   data() {
     return {
       name: "map area",
       images: data,
       currRoom: "/map/" + (data.length - 1),
+      showMinimap: false,
     };
   },
 };
 </script>
 <template>
-  <Info :description="images[$route.params.mapId].description" />
+  <div class="minimap-container">
+    <Minimap :defaultChecked="showMinimap" />
+  </div>
+
   <div class="container">
     <router-link
       v-if="images[$route.params.mapId].up"
@@ -27,32 +34,40 @@ export default {
     >
       <div class="box box-up"><span class="arrow">🡩</span></div>
     </router-link>
+
     <router-link
       v-if="images[$route.params.mapId].left"
       :to="images[$route.params.mapId].left"
     >
       <div class="box box-left"><span class="arrow">🡨</span></div>
     </router-link>
+
     <router-link
       v-if="images[$route.params.mapId].right"
       :to="images[$route.params.mapId].right"
     >
       <div class="box box-right"><span class="arrow">🡪</span></div>
     </router-link>
+
     <router-link
       v-if="images[$route.params.mapId].down"
       :to="images[$route.params.mapId].down"
     >
       <div class="box box-down"><span class="arrow">🡫</span></div>
     </router-link>
+
     <Map :imgSrc="images[$route.params.mapId].path" />
+
+    <h1 v-if="images[$route.params.mapId].shop" class="merchant-container">
+      <div class="wrap">
+        <img class="merchant" src="/img/Assets/Merchant.png" />
+        <h1 class="merchant-text">Marchand</h1>
+      </div>
+    </h1>
+
+    <Info :description="images[$route.params.mapId].description" />
   </div>
-  <h1 v-if="images[$route.params.mapId].shop" class="merchant-container">
-    <div class="wrap">
-      <img class="merchant" src="/img/Assets/Merchant.png" />
-      <p class="merchant-text">Marchand</p>
-    </div>
-  </h1>
+
   <NavBtn />
 </template>
 
@@ -72,6 +87,18 @@ export default {
   top: 9svh;
 }
 
+.minimap-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(1.5);
+}
+
 img {
   height: 100%;
   width: auto;
@@ -86,15 +113,17 @@ img {
 .merchant-container {
   display: flex;
   position: absolute;
-  top: 50svh;
-  width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 .wrap {
-  width: 8%;
+  width: 20svh;
+  position: relative;
+  margin: 0;
+  left: 8.2svw;
+  top: 10svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -102,8 +131,14 @@ img {
 }
 
 .merchant {
+  height: 100%;
   width: 100%;
+  object-fit: contain;
+  max-height: 50svh;
+  border-radius: 1svh;
   margin: 0;
+  position: relative;
+  left: 0;
 }
 
 .merchant-text {

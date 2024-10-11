@@ -1,6 +1,7 @@
 const data = [
   {
     id: 0,
+    number: 0,
     path: "/img/Assets/ShopRoom.png",
     up: false,
     down: "false",
@@ -11,6 +12,7 @@ const data = [
   },
   {
     id: 1,
+    number: 1,
     path: "/img/maps/map_0/Map1.png",
     up: false,
     down: false,
@@ -22,6 +24,7 @@ const data = [
   },
   {
     id: 2,
+    number: 2,
     path: "/img/maps/map_0/Map2.png",
     up: "/map/3",
     down: false,
@@ -33,6 +36,7 @@ const data = [
   },
   {
     id: 3,
+    number: 3,
     path: "/img/maps/map_0/Map3.png",
     up: false,
     down: "/map/2",
@@ -44,6 +48,7 @@ const data = [
   },
   {
     id: 4,
+    number: 4,
     path: "/img/maps/map_0/Map4.png",
     up: false,
     down: "/map/5",
@@ -55,6 +60,7 @@ const data = [
   },
   {
     id: 5,
+    number: 5,
     path: "/img/maps/map_0/Map5.png",
     up: "/map/4",
     down: "/map/6",
@@ -66,6 +72,7 @@ const data = [
   },
   {
     id: 6,
+    number: 6,
     path: "/img/maps/map_0/Map6.png",
     up: "/map/5",
     down: "/map/7",
@@ -77,6 +84,7 @@ const data = [
   },
   {
     id: 7,
+    number: 7,
     path: "/img/maps/map_0/Map7.png",
     up: "/map/6",
     down: "/map/8",
@@ -88,6 +96,7 @@ const data = [
   },
   {
     id: 8,
+    number: 8,
     path: "/img/maps/map_0/Map8.png",
     up: "/map/7",
     down: "/map/9",
@@ -99,6 +108,7 @@ const data = [
   },
   {
     id: 9,
+    number: "",
     path: "/img/maps/map_0/Map9.png",
     up: "/map/8",
     down: "/map/12",
@@ -110,6 +120,7 @@ const data = [
   },
   {
     id: 10,
+    number: 0,
     path: "/img/maps/map_0/Map10.png",
     up: false,
     down: false,
@@ -121,6 +132,7 @@ const data = [
   },
   {
     id: 11,
+    number: 0,
     path: "/img/maps/map_0/Map11.png",
     up: false,
     down: false,
@@ -132,6 +144,7 @@ const data = [
   },
   {
     id: 12,
+    number: 0,
     path: "/img/maps/map_0/Map12.png",
     up: "/map/9",
     down: false,
@@ -143,6 +156,7 @@ const data = [
   },
   {
     id: 13,
+    number: 9,
     path: "/img/maps/map_0/Map13.png",
     up: false,
     down: false,
@@ -154,6 +168,7 @@ const data = [
   },
   {
     id: 14,
+    number: 10,
     path: "/img/maps/map_0/Map14.png",
     up: "/map/15",
     down: false,
@@ -165,6 +180,7 @@ const data = [
   },
   {
     id: 15,
+    number: "",
     path: "/img/maps/map_0/Map15.png",
     up: "/map/16",
     down: "/map/14",
@@ -176,6 +192,7 @@ const data = [
   },
   {
     id: 16,
+    number: 11,
     path: "/img/maps/map_0/Map16.png",
     up: "/map/17",
     down: "/map/15",
@@ -187,6 +204,7 @@ const data = [
   },
   {
     id: 17,
+    number: 12,
     path: "/img/maps/map_0/Map17.png",
     up: false,
     down: "/map/16",
