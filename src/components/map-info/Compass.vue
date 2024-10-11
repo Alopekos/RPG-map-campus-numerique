@@ -8,12 +8,10 @@ export default {
     CompassMapImg,
   },
   props: {
-    defaultChecked: [
-      {
-        type: Boolean,
-        default: false,
-      },
-    ],
+    defaultChecked: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -47,15 +45,18 @@ export default {
   <button @click="defaultChecked = false" v-show="defaultChecked" class="close">
     <span>❌</span>
   </button>
+  <div @click="defaultChecked = true" v-show="!defaultChecked" class="compass">
+    <img src="/img/Assets/compass.png" alt="compass" />
+  </div>
 </template>
 
 <style scoped>
 .tile {
   display: flex;
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   border-radius: 3px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 1);
   margin: 0.5svh;
   padding: 0.5svh;
   font-size: 0.7rem;
@@ -68,21 +69,30 @@ export default {
   flex-direction: row;
 }
 
+.compass {
+  position: fixed;
+  top: 75svh;
+  left: 22.5svw;
+}
+
+.compass > img {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  padding: 4px;
+  border-radius: 50%;
+}
+
 img {
   width: 100%;
   height: 100%;
   height: 100%;
-
+  opacity: 1;
   object-fit: contain;
   max-height: none;
   border-radius: 1svh;
   margin: 0;
   position: relative;
-}
-
-button {
-  border: none;
-  margin-top: 0;
 }
 
 .map-container {
@@ -111,13 +121,14 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  width: 485px;
-  position: absolute;
-  background-color: black;
+  width: 660px;
+  position: relative;
+  background-color: rgb(48, 47, 47);
   border-radius: 10px;
   transition: 1s;
+  opacity: 0.8;
 }
 CompassMapImg {
   position: absolute;
@@ -135,8 +146,7 @@ CompassMapImg {
   border-radius: 10px;
   padding: 0 0.5svw;
   font-size: 1.5rem;
-  position: relative;
-  top: 30svh;
   transition: 1s;
+  display: flex;
 }
 </style>

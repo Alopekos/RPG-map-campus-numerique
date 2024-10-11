@@ -1,6 +1,11 @@
 <script>
+import Minimap from "../map-info/Compass.vue";
+
 export default {
   props: ["description"],
+  components: {
+    Minimap,
+  },
   data() {
     return {
       name: "Info",
@@ -20,6 +25,7 @@ export default {
         </router-link>
       </div>
     </div>
+    <Minimap :defaultChecked="showMinimap" class="minimap" />
   </div>
 </template>
 
@@ -29,7 +35,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-left: 15svw;
+  margin: 0 3svw 0 15svw;
 }
 
 .buttons-container {
@@ -58,6 +64,7 @@ export default {
   max-height: auto;
   text-align: center;
 }
+
 
 .map-details {
   height: 100%;

@@ -23,11 +23,11 @@ export default {
 };
 </script>
 <template>
-  <div class="minimap-container">
-    <Minimap :defaultChecked="showMinimap" />
-  </div>
-
   <div class="container">
+    <Map :imgSrc="images[$route.params.mapId].path" />
+
+    <Info :description="images[$route.params.mapId].description" />
+
     <router-link
       v-if="images[$route.params.mapId].up"
       :to="images[$route.params.mapId].up"
@@ -56,16 +56,12 @@ export default {
       <div class="box box-down"><span class="arrow">🡫</span></div>
     </router-link>
 
-    <Map :imgSrc="images[$route.params.mapId].path" />
-
     <h1 v-if="images[$route.params.mapId].shop" class="merchant-container">
       <div class="wrap">
         <img class="merchant" src="/img/Assets/Merchant.png" />
         <h1 class="merchant-text">Marchand</h1>
       </div>
     </h1>
-
-    <Info :description="images[$route.params.mapId].description" />
   </div>
 
   <NavBtn />
@@ -85,18 +81,6 @@ export default {
 .title {
   position: absolute;
   top: 9svh;
-}
-
-.minimap-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  transform: scale(1.5);
 }
 
 img {
