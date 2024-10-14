@@ -12,7 +12,7 @@ const data = [
   },
   {
     id: 1,
-    number: 1,
+    number: "0" + 1,
     path: "/img/maps/map_0/Map1.png",
     up: false,
     down: false,
@@ -24,7 +24,7 @@ const data = [
   },
   {
     id: 2,
-    number: 2,
+    number: "0" + 2,
     path: "/img/maps/map_0/Map2.png",
     up: "/map/3",
     down: false,
@@ -36,7 +36,7 @@ const data = [
   },
   {
     id: 3,
-    number: 3,
+    number: "0" + 3,
     path: "/img/maps/map_0/Map3.png",
     up: false,
     down: "/map/2",
@@ -48,7 +48,7 @@ const data = [
   },
   {
     id: 4,
-    number: 4,
+    number: "0" + 4,
     path: "/img/maps/map_0/Map4.png",
     up: false,
     down: "/map/5",
@@ -60,7 +60,7 @@ const data = [
   },
   {
     id: 5,
-    number: 5,
+    number: "0" + 5,
     path: "/img/maps/map_0/Map5.png",
     up: "/map/4",
     down: "/map/6",
@@ -72,7 +72,7 @@ const data = [
   },
   {
     id: 6,
-    number: 6,
+    number: "0" + 6,
     path: "/img/maps/map_0/Map6.png",
     up: "/map/5",
     down: "/map/7",
@@ -84,7 +84,7 @@ const data = [
   },
   {
     id: 7,
-    number: 7,
+    number: "0" + 7,
     path: "/img/maps/map_0/Map7.png",
     up: "/map/6",
     down: "/map/8",
@@ -96,7 +96,7 @@ const data = [
   },
   {
     id: 8,
-    number: 8,
+    number: "0" + 8,
     path: "/img/maps/map_0/Map8.png",
     up: "/map/7",
     down: "/map/9",
@@ -156,7 +156,7 @@ const data = [
   },
   {
     id: 13,
-    number: 9,
+    number: "0" + 9,
     path: "/img/maps/map_0/Map13.png",
     up: false,
     down: false,

@@ -117,7 +117,7 @@ img {
   width: 100%;
   height: 100%;
   height: 100%;
-  opacity: 1;
+  opacity: 0.5;
   object-fit: contain;
   max-height: none;
   border-radius: 1svh;
@@ -130,12 +130,15 @@ img {
   position: relative;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
   transition: 0.7s;
 }
 
 .tile:hover img {
   transform: scale(1.3);
   transition: 0.7s;
+  opacity: 1;
 }
 
 .tile:hover .tile-number {
@@ -145,6 +148,11 @@ img {
 
 .tile-number {
   transition: 0.3s;
+  position: absolute;
+  font-size: 3rem;
+  z-index: 4;
+  left: 20%;
+  top: auto;
 }
 
 .compass-container {
