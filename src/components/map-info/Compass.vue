@@ -93,10 +93,10 @@ span {
   width: 100%;
 }
 
-button{
+button {
   border: none;
   background-color: rgb(34, 34, 34) !important;
-  margin: .5svh 1svh 0 0;
+  margin: 0.5svh 1svh 0 0;
 }
 
 .compass {
@@ -106,8 +106,8 @@ button{
 }
 
 .compass > img {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70;
   background-color: white;
   padding: 4px;
   border-radius: 50%;
@@ -168,7 +168,6 @@ img {
   align-items: center;
   justify-content: center;
 }
-
 
 .close {
   background-color: black;
